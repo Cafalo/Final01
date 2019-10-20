@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie-edge">
+    <title>Chavit Lertnimulchai CV</title>
+    <style>
+        * {
+            margin:0;
+            padding:0;
+        }
+
+
+        .clearfix{
+            clear: both;
+        
+        }
+        .container{
+            width: 530px;
+            margin: 0 auto;
+            background-color: white;
+            overflow: hidden;
+            
+ 
+        }
+        
+        header {
+            text-align: left;
+            border: black;
+            justify-content: center;
+            display: flex;
+            width: 530px;
+            height: 150px;
+            background: #FB5F20;
+            margin: 0 auto;
+
+
+        }
+        
+        section {
+            text-align: left;
+            width: 330px;
+            height: 300px;
+            background:white;
+            float: left;
+  
+        
+        }
+        
+        aside{
+            width: 200px;
+            height: 300px;
+            text-align: center;
+            background: grey;
+            float: left;
+
+        }
+        
+        footer{
+        
+            width: 530px;
+            height: 50px;
+  
+            background-color: #FB5F20;
+
+        }
+        
+        .label {
+            border: 1px solid; width: 120px; 
+            padding: 3px; margin: auto;
+            background-color: Black; color: white;
+            text-align: center; font-weight: bold; 
+            -webkit-box-shadow: 2px 2px 0px #000000;
+            -moz-box-shadow: 2px 2px 0px #000000;
+            -box-shadow: 2px 2px 0px #000000;
+          }
+
+        ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul li {
+
+            position: relative;
+            padding: 12px 8px 12px 40px;
+            list-style-type: none;
+            font-size: 18px;
+            transition: 0.2s;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+        .image {
+
+        width: 300px; height: 300px;
+        margin: auto; margin-top: 15px;
+
+        }
+        
+        ul li:nth-child(odd) {
+            background: #f9f9f9;
+        }
+
+    </style>
+
+
+</head>
+<style media="screen">
+
+</style>
+<body>
+    <div class="container">
+        <header>
+            <div>
+            <h1 id="fullName" align='left' >Chavit Lertnimulchai </id> </h1>
+            <h1 id="nickName" align='left' >Sun</id> </h1>
+            <h1 id="class" align='left'><i>Meme Engineer</i></id> </h1>
+            <input type="text" id="changeName" align='left'><button onclick="changeName()" onkeydown="alertS()">change name</button>
+            <script>
+                    function changeName(){
+                                        var inputText = document.getElementById("changeName");
+                                        document.getElementById("nickName").innerHTML = inputText.value;
+                                    }
+                </script>
+            </div>
+            <div>
+                <img style="width: 150px; height: 150px; " vertical-align: auto;
+                src="https://static.standard.co.uk/s3fs-public/thumbnails/image/2018/06/01/19/trump.jpg"
+                alt="TRUMP!!!">
+            </div>
+
+        </header>
+        <section>
+            
+            <div>
+                
+                    <div class="label">PROFILE</div>
+                    <ul style="text-align: left;">
+                        <li>A highly motivated meme engineer.</li>
+                    </ul>
+                <div class="label">EDUCATION</div>
+                <ul style="text-align: left;">
+                    <li>MSc in Meme Engineering</li>
+                </ul>
+                
+                <div class="label">EXPERIENCE</div>
+                <ul style="text-align: left;">
+                        <li>Right hand of Empoohrer Xi</li>
+                    </ul>
+
+    
+
+            </div>
+        </section>
+        <aside>
+                <div class="label">SKILL</div>
+                <input type="text" id="Somsak" align="center">
+                <br>
+                <button onclick="addLI()">Add</button>
+                <button onclick="removeLI()">Remove</button>
+                <ul style="text-align: left;" id="list">
+                  <li>Small hand</li>
+                  <li>Orange skin</li>
+                  <li>Mango Mussolini</li>
+                </ul>
+        </aside>
+        <div class="clearfix"></div>
+        <footer>
+            <h1><span onclick="fncAlert(this);" >My email address: click here</span></h1>
+        </footer>
+    </div>
+    <script>
+        function fncAlert(){
+            alert('Somsak@Somchai.com');
+            }
+
+            function addLI(){
+            var ul = document.getElementById("list");
+            var candidate = document.getElementById("Somsak");
+            var li = document.createElement("li");
+            li.setAttribute('id',Somsak.value);
+            li.appendChild(document.createTextNode(Somsak.value));
+            ul.appendChild(li);
+            }
+            var items = document.querySelectorAll("#list li"),
+                tab = [], liIndex;
+        
+        for(var i = 0; i < items.length; i++){
+            tab.push(items[i].innerHTML);
+        }
+        
+        for(var i = 0; i < items.length; i++){
+            
+            items[i].onclick = function(){
+                
+                liIndex = tab.indexOf(this.innerHTML);
+                console.log(this.innerHTML + " INDEX = " + liIndex);
+            };
+            
+            }
+
+
+
+
+            function removeLI(){
+               
+                items[liIndex].parentNode.removeChild(items[liIndex]);
+
+            }
+            
+        </script>
+</body>
+
+</html>
